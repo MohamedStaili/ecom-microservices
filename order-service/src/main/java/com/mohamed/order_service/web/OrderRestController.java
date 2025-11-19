@@ -1,4 +1,4 @@
-package com.mohamed.order_service.entities.web;
+package com.mohamed.order_service.web;
 
 import com.mohamed.order_service.entities.Order;
 import com.mohamed.order_service.models.Customer;

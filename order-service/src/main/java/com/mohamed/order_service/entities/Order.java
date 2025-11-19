@@ -18,7 +18,7 @@ public class Order {
     private Long id;
     private Date createAt;
     private OrderStatus status;
-    private Long CustomerId ;
+    private Long customerId ;
     @Transient
     private Customer customer;
     @OneToMany(mappedBy = "order")

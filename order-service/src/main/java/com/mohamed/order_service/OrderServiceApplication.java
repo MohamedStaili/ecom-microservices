@@ -42,7 +42,7 @@ public class OrderServiceApplication {
 			Random random = new Random();
 			for (int i = 0; i < 20; i++) {
 				Order order = Order.builder()
-						.CustomerId(customers.get(random.nextInt(customers.size())).getId())
+						.customerId(customers.get(random.nextInt(customers.size())).getId())
 						.status(Math.random()>0.5?OrderStatus.PENDING:OrderStatus.CREATED)
 						.createAt(new Date())
 						.build();

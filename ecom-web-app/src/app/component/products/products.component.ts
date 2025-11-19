@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NgForOf, NgIf} from '@angular/common';
-
 @Component({
   selector: 'app-products',
   imports: [
@@ -17,13 +16,11 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get("http://localhost:9999/inventory-service/products").subscribe({
+    this.http.get("http://localhost:9999/inventory-service/products?projection=fullProduct").subscribe({
       next: data => {
         this.products = data;
       },
       error: err => {}
     })
   }
-
-
 }
